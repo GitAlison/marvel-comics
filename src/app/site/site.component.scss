@@ -1,0 +1,33 @@
+// Nav
+nav {
+    padding: 9px 10px;
+    background-color: #0000008f;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    left: 0;
+    border-bottom: 1px solid rgb(93, 93, 93);
+    justify-content: center;
+    color: #cccccc;
+    img {
+        width: 100px;
+        pointer-events: none;
+    }
+    h1 {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+}
+
+// End Nav
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 9px;
+    padding-bottom: 300px;
+    z-index: 0;
+}
