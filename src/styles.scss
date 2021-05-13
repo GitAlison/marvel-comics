@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,400;1,400&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+}
+
+h1,
+H2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+}
+
+body {
+    background-color: #303030;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.682) 0%, rgba(0, 0, 0, 0.586) 59%, rgba(0, 0, 0, 0.65) 100%), url('/assets/images/background.jpg') no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-warning {
+    color: #b2650e;
+}
+
+// Custom Scroll
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #ab080f;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9a050c;
+}
+
+@keyframes animationFrame {
+    50% {
+        background-position: 100% 50%;
+    }
+}

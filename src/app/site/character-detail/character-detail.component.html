@@ -1,0 +1,23 @@
+<div class="bar-title">
+    <button routerLink="/"></button>
+    <h1 class="title">{{character?.name}}</h1>
+
+</div>
+
+<h1 *ngIf="loading">carregando...</h1>
+
+
+<div class="content" *ngIf="character">
+    <div class="image">
+        <img *ngIf="character?.thumbnail" [src]="character?.thumbnail?.path+'.'+character?.thumbnail?.extension" [alt]="character?.name">
+    </div>
+    <div class="details">
+        <h2 class="title">{{character?.description}}</h2>
+
+        <button (click)="selectCharacter()" [ngClass]="{'selected': verifySelected()}"> {{verifySelected()? 'remover seleção': 'selecionar'}}</button>
+    </div>
+</div>
+
+<h1 class="text-center text-danget" *ngIf="character">
+    {{error}}
+</h1>

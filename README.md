@@ -1,3 +1,28 @@
+# 👋 hi , an SPA application that chooses your 5 favorite characters   
+
+### Technologies and Tools
+<img align="left" alt="Python" width="40px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png" />
+
+
+<br />
+
+I`m Usin API Marvel for this experiment.
+
+
+## Preview;
+
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image0.png)
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image1.png)
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image2.png)
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image3.png)
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image4.png)
+
+
+
+#### Feel free to create a pull request to contribute to any of my repositories.💙
+
+------
+
 # MarvelComics
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
