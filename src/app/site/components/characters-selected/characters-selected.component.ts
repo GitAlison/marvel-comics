@@ -15,6 +15,7 @@ export class CharactersSelectedComponent implements OnInit {
   characters: Character[] = [];
   characters2: Character[] = [];
   subscription: Subscription = new Subscription();
+  openedCover = false;
   constructor(private charatersServices: CharactersService) { }
 
   ngOnInit(): void {
@@ -29,8 +30,12 @@ export class CharactersSelectedComponent implements OnInit {
     )
   }
 
-  removeCharacter(id: number) {
-    this.charatersServices.selectCharacter(Object.assign({ id: id }));
+  removeCharacter(id: number): void {
+    this.charatersServices.selectCharacter(Object.assign({ id }));
+  }
+
+  toggleCover(): void {
+    this.openedCover = !this.openedCover;
   }
 
   ngOnDestroy(): void {
