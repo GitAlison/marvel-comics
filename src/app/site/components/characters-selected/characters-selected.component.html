@@ -1,0 +1,12 @@
+<div class="slide" *ngIf="characters.length > 0" [style.border-color]="characters.length == 5 ? '#c4c77a' : ''">
+    <h3 class="text-center">PERSONAGENS SELECIONADOS {{characters.length}} </h3>
+    <div class="list">
+
+        <!-- List of Characters -->
+        <div *ngFor="let c of characters" (click)="removeCharacter(c.id)" class="character" [style.background-image]="'url('+c.thumbnail.path+'.'+c.thumbnail.extension+')'">
+            <span class="name-hero">{{c.name}}</span>
+        </div>
+        <!-- End List of Characters -->
+
+    </div>
+</div>
