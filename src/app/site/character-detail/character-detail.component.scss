@@ -1,0 +1,115 @@
+.bar-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding: 9px 10px;
+    right: 0;
+    left: 0;
+    background-color: #00000093;
+    .title {
+        text-align: right;
+        white-space: pre-wrap;
+        line-height: 1.8rem;
+    }
+    button {
+        background-color: transparent;
+        border-radius: 80px;
+        border: 0.5px solid whitesmoke;
+        padding: 10px;
+        font-size: 50px;
+        position: relative;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        max-height: 40px;
+        .selected {
+            position: absolute;
+            content: "";
+            top: calc(-1 * var(--border-width));
+            left: calc(-1 * var(--border-width));
+            z-index: 2;
+            width: calc(100% + var(--border-width) * 2);
+            height: calc(100% + var(--border-width) * 2);
+            background: linear-gradient( 60deg, hsla(232, 94%, 26%, 0.928), hsl(230, 78%, 31%), hsl(314, 85%, 66%), hsl(359, 88%, 45%), hsl(44, 85%, 66%), #dc1503, hsl(44, 51%, 93%), hsl(0, 0%, 56%));
+            background-size: 300% 300%;
+            background-position: 0 50%;
+            animation: animationFrame 2s alternate infinite;
+        }
+        &:hover {
+            background-color: #d2d2d26d;
+            cursor: pointer;
+        }
+        &::after {
+            content: '\2039';
+            position: absolute;
+            color: white;
+            font-size: 44px;
+            left: 11px;
+            top: -14px;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    gap: 10px;
+    .image {
+        max-width: 50%;
+        min-width: 50%;
+        justify-content: flex-end;
+        display: flex;
+    }
+    img {
+        max-width: 100%;
+    }
+    .details {
+        .title {
+            margin-bottom: 10px;
+        }
+        button {
+            --border-width: 3px;
+            cursor: pointer;
+            padding: 16px 40px;
+            font-size: 1.5rem;
+            position: relative;
+            border: 1px solid goldenrod;
+            font-family: 'Bebas Neue', cursive;
+            background-color: rgba(0, 0, 0, 0.521);
+            text-transform: uppercase;
+            &.selected:after {
+                position: absolute;
+                content: "";
+                top: calc(-1 * var(--border-width));
+                left: calc(-1 * var(--border-width));
+                z-index: -1;
+                width: calc(100% + var(--border-width) * 2);
+                height: calc(100% + var(--border-width) * 2);
+                background: linear-gradient( 60deg, hsla(232, 94%, 26%, 0.928), hsl(230, 78%, 31%), hsl(314, 85%, 66%), hsl(359, 88%, 45%), hsl(44, 85%, 66%), #dc1503, hsl(44, 51%, 93%), hsl(0, 0%, 56%));
+                background-size: 300% 300%;
+                background-position: 0 50%;
+                animation: animationFrame 2s alternate infinite;
+            }
+            &:hover {
+                background-color: #5e5e5e70;
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .content {
+        flex-direction: column;
+        .image {
+            max-width: 100%;
+            align-self: center;
+        }
+        .details {
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

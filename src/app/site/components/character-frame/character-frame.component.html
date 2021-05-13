@@ -1,0 +1,11 @@
+<div class="container">
+    <div (click)="selectCharacter()" class="frame" [ngClass]="{'selected':selected}" [style.background-image]="'url('+character.thumbnail.path+'.'+character.thumbnail.extension+')'">
+
+        <span class="name-hero">{{character.name}}</span>
+
+    </div>
+
+    <div>
+        <button [routerLink]="'/'+character.id">Detalhes</button>
+    </div>
+</div>

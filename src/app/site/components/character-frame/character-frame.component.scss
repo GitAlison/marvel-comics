@@ -1,0 +1,82 @@
+img {
+    width: 150px;
+}
+
+.container {
+    .frame {
+        --border-width: 3px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: white;
+        background: #20202000;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        width: 200px;
+        justify-content: flex-end;
+        cursor: pointer;
+        transform: all;
+        transition: 100ms ease-in-out all;
+        margin-bottom: 3px;
+        .name-hero {
+            white-space: pre-wrap;
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 2px;
+            font-size: 1.3rem;
+            background: rgb(41, 61, 64);
+            background: linear-gradient(90deg, #000000ab 0%, #00000014 100%);
+            width: 100%;
+            padding: 3px 4px;
+        }
+        &:hover {
+            box-shadow: inset 0px 0px 9px 4px black;
+            &:after {
+                position: absolute;
+                content: "";
+                top: calc(-1 * var(--border-width));
+                left: calc(-1 * var(--border-width));
+                z-index: -1;
+                width: calc(100% + var(--border-width) * 2);
+                height: calc(100% + var(--border-width) * 2);
+                background: linear-gradient( 60deg, #d7f25f, #f2a95f, hsl(67, 100%, 87%), hsl(358, 61%, 92%), hsl(44, 85%, 66%), #dcca03, hsl(55, 48%, 95%), hsl(28, 85%, 66%));
+                background-size: 300% 300%;
+                background-position: 0 50%;
+                animation: animationFrame 2s alternate infinite;
+            }
+        }
+        &.selected:after {
+            position: absolute;
+            content: "";
+            top: calc(-1 * var(--border-width));
+            left: calc(-1 * var(--border-width));
+            z-index: -1;
+            width: calc(100% + var(--border-width) * 2);
+            height: calc(100% + var(--border-width) * 2);
+            background: linear-gradient( 60deg, hsla(232, 94%, 26%, 0.928), hsl(230, 78%, 31%), hsl(314, 85%, 66%), hsl(359, 88%, 45%), hsl(44, 85%, 66%), #dc1503, hsl(44, 51%, 93%), hsl(0, 0%, 56%));
+            background-size: 300% 300%;
+            background-position: 0 50%;
+            animation: animationFrame 2s alternate infinite;
+        }
+    }
+    button {
+        width: 100%;
+        padding: 2px 4px;
+        background-color: black;
+        border: none;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 3px;
+        cursor: pointer;
+        border: 1px solid #555252;
+        &:hover {
+            background-color: #2e2e2e;
+        }
+    }
+}
