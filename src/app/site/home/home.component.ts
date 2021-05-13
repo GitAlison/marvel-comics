@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   subject: Subject<any> = new Subject();
   searchInputString = '';
   offset = -20;
-
+  errorMessage = '';
   constructor(private charactersService: CharactersService) {
 
   }
@@ -97,7 +97,9 @@ export class HomeComponent implements OnInit {
         this.charactersService.addAll(data.data.results);
       },
       error => {
+
         setTimeout(() => {
+          this.errorMessage = 'Ocorreu um error tente novamente';
           this.loading = false;
         }, 3000);
 
