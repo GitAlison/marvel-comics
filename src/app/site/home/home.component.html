@@ -1,0 +1,23 @@
+<h1 class="text-center">Selecione os 5 personagens preferidos</h1>
+<br>
+<input [(ngModel)]="searchInputString" type="text" placeholder="Buscar Pelo Nome" (ngModelChange)="searchInput($event)">
+
+
+<div (scroll)="onScroll($event)">
+    <div class="search-result" *ngIf="searchLoaded">
+        <h2 class="text-center">Resultado Pesquisa</h2>
+        <h4 class="text-center text-warning" *ngIf="charactersSearchResult.length == 0"> Nada Encontrado</h4>
+        <div class="grid-characters">
+            <div *ngFor="let c of charactersSearchResult;">
+                <app-character-frame [character]="c" [selected]="verifySelected(c)"></app-character-frame>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-characters">
+        <div *ngFor="let c of characters;">
+            <app-character-frame [character]="c" [selected]="verifySelected(c)"></app-character-frame>
+        </div>
+    </div>
+</div>
+<h1 *ngIf="loading" class="text-center">carregando...</h1>
