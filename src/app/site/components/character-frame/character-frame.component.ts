@@ -1,9 +1,7 @@
 import { CharactersService } from './../../services/characters.service';
-
 import { Component, Input, OnInit } from '@angular/core';
+
 import { Character } from 'src/app/interfaces/character';
-
-
 
 
 @Component({
@@ -23,8 +21,6 @@ export class CharacterFrameComponent implements OnInit {
 
     // Seleciona o Personagem ou desseleciona
     this.characterService.selectCharacter(this.character);
-
-    // this.selected = !this.selected;
   }
 
 

@@ -6,8 +6,17 @@
 
 <br />
 
-### Connect with me
-[<img src ="https://img.shields.io/badge/website-%23.svg?&style=for-the-badge&logo=www&logoColor=white%22&color=black">]
+I`m Usin API Marvel for this experiment.
+
+
+## Preview;
+
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image0.png)
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image1.png)
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image2.png)
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image3.png)
+![alt text](https://github.com/GitAlison/marvel-comics/blob/master/images/image4.png)
+
 
 
 #### Feel free to create a pull request to contribute to any of my repositories.💙

@@ -1,5 +1,5 @@
 import { Character } from 'src/app/interfaces/character';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { CharactersService } from '../../services/characters.service';
@@ -10,7 +10,7 @@ import { CharactersService } from '../../services/characters.service';
   templateUrl: './characters-selected.component.html',
   styleUrls: ['./characters-selected.component.scss']
 })
-export class CharactersSelectedComponent implements OnInit {
+export class CharactersSelectedComponent implements OnInit, OnDestroy {
 
   characters: Character[] = [];
   characters2: Character[] = [];
@@ -20,14 +20,13 @@ export class CharactersSelectedComponent implements OnInit {
 
   ngOnInit(): void {
 
-
     this.subscription.add(
       this.charatersServices.getSelected.subscribe(
         data => {
           this.characters = data;
         }
       )
-    )
+    );
   }
 
   removeCharacter(id: number): void {

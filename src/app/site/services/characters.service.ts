@@ -9,7 +9,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class CharactersService {
 
-
   private _charactersListSelected = new BehaviorSubject<Character[]>([]);
   private _charactersListLoaded = new BehaviorSubject<Character[]>([]);
 
@@ -28,13 +27,11 @@ export class CharactersService {
 
   getOneCharacter(id: number): Character | undefined {
     let obj;
-    this.getLoaded.pipe(take(1), map(obj => {
-      let object = obj.find(o => o.id == id);
-      return object;
-
+    this.getLoaded.pipe(take(1), map(data => {
+      return data.find(o => o.id === id);
     })).subscribe(
-      data => {
-        obj = data;
+      result => {
+        obj = result;
       }
     );
 
@@ -44,7 +41,7 @@ export class CharactersService {
 
   selectCharacter(character: Character): void {
 
-    const indexCharacter = this._localCharacters.findIndex(c => c.id == character.id)
+    const indexCharacter = this._localCharacters.findIndex(c => c.id === character.id);
 
     // Verifica A existencia o item selecionado
     if (indexCharacter < 0) {
@@ -80,7 +77,7 @@ export class CharactersService {
     return this.http.get<any>(`characters/${id}`);
   }
   searchNameStartsWith(nameStartsWith: string): Observable<any> {
-    let params = new HttpParams().set('nameStartsWith', nameStartsWith);
+    const params = new HttpParams().set('nameStartsWith', nameStartsWith);
 
     return this.http.get<any>(`characters`, { params });
   }
